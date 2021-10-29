@@ -1,0 +1,13 @@
+@hello
+ xin chào
+@back
+ quay lại
+@dictionary
+ từ điển
+@content
+ nội dung
+@data
+ dữ liệu
+@cat
+ mèo
+@

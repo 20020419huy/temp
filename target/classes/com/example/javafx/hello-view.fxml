@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1300.0" style="-fx-background-image: url(&quot;https://scontent.fhan5-9.fna.fbcdn.net/v/t39.30808-6/241203026_577141873606494_2503242843157473103_n.jpg?_nc_cat=109&amp;ccb=1-5&amp;_nc_sid=730e14&amp;_nc_ohc=fzxegfi9PcAAX-mvUG9&amp;tn=vevCxgaCCuICVmVC&amp;_nc_ht=scontent.fhan5-9.fna&amp;oh=9f1d8af4d63ec5292299021ee223b4dc&amp;oe=617FDB4F&quot;);" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafx.HelloController">
+    <children>
+        <AnchorPane fx:id="content" layoutX="300.0" layoutY="50.0" prefHeight="700.0" prefWidth="950.0" style="-fx-background-color: #333; -fx-background-radius: 50px;">
+            <children>
+                <AnchorPane fx:id="contentSearch" prefHeight="700.0" prefWidth="950.0" style="-fx-background-color: #333; -fx-background-radius: 50px; visibility: true;">
+                    <children>
+                        <AnchorPane fx:id="searchOnlWrap" layoutX="50.0" layoutY="50.0" prefHeight="50.0" prefWidth="600.0" style="visibility: true;">
+                            <children>
+                                <TextField fx:id="inputSearch" prefWidth="490.0" promptText="Nhập từ cần tìm" style="-fx-font-size: 16px; -fx-font-weight: 600;">
+                                    <padding>
+                                        <Insets bottom="12.0" left="10.0" right="30.0" top="12.0" />
+                                    </padding>
+                                    <font>
+                                        <Font size="19.0" />
+                                    </font>
+                                </TextField>
+                                <AnchorPane fx:id="submitSearch" layoutX="410.0" layoutY="4.5" prefHeight="40.0" prefWidth="75.0" style="-fx-background-color: #999; -fx-background-radius: 2px; -fx-cursor: CLOSED_HAND;">
+                                    <children>
+                                        <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="25.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@img/sreachButton.png" />
+                                            </image>
+                                        </ImageView>
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </AnchorPane>
+                <AnchorPane fx:id="contentNote" prefHeight="700.0" prefWidth="950.0" style="-fx-background-color: #333; -fx-background-radius: 50px; visibility: false;">
+               <children>
+                  <AnchorPane fx:id="searchNoteWrap" layoutX="50.0" layoutY="50.0" prefHeight="50.0" prefWidth="600.0">
+                     <children>
+                        <TextField fx:id="searchNote" prefHeight="49.0" prefWidth="490.0" promptText="Nhập từ cần tìm">
+                           <font>
+                              <Font size="14.0" />
+                           </font></TextField>
+                        <AnchorPane fx:id="submitSearchNote" layoutX="410.0" layoutY="4.5" prefHeight="40.0" prefWidth="75.0" style="-fx-background-color: #999; -fx-background-radius: 2px; -fx-cursor: CLOSED_HAND;">
+                           <children>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="25.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@img/sreachButton.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </children>
+                </AnchorPane>
+                <AnchorPane fx:id="contentGame" layoutX="50.0" layoutY="50.0" prefHeight="600.0" prefWidth="850.0" style="-fx-background-color: #333; -fx-background-radius: 50px; visibility: false;" />
+                <AnchorPane fx:id="contentSetting" prefHeight="700.0" prefWidth="950.0" style="-fx-background-color: #333; -fx-background-radius: 50px; visibility: false;">
+                    <children>
+                        <Button layoutX="582.0" layoutY="64.0" mnemonicParsing="false" onAction="#Search" prefHeight="30.0" prefWidth="64.0" text="Search" />
+                  <TextField fx:id="input" layoutX="174.0" layoutY="66.0" prefHeight="26.0" prefWidth="351.0" promptText="Nhập từ" />
+                  <TextArea fx:id="output" layoutX="183.0" layoutY="181.0" prefHeight="410.0" prefWidth="546.0" />
+                  <Button layoutX="76.0" layoutY="195.0" minWidth="42.0" mnemonicParsing="false" onAction="#addInOffline" prefHeight="35.0" prefWidth="35.0">
+                     <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/add.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <ImageView fx:id="nodata" fitHeight="434.0" fitWidth="565.0" layoutX="174.0" layoutY="181.0" pickOnBounds="true" preserveRatio="true" style="visibility: false;">
+                     <image>
+                        <Image url="@img/noData.png" />
+                     </image>
+                  </ImageView>
+                    </children>
+                </AnchorPane>
+            </children></AnchorPane>
+        <AnchorPane fx:id="control" layoutX="50.0" layoutY="50.0" prefHeight="700.0" prefWidth="200.0" style="-fx-background-color: #999; -fx-background-radius: 50px;">
+            <children>
+                <HBox fx:id="bgSearch" layoutX="50.0" layoutY="50.0" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 20px; -fx-background-color: #666;">
+                    <children>
+                        <ImageView fx:id="buttonSearch" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: CLOSED_HAND;">
+                            <image>
+                                <Image url="@img/search.png" />
+                            </image>
+                        </ImageView>
+                    </children></HBox>
+                <HBox fx:id="bgNote" layoutX="50.0" layoutY="216.67" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 20px; -fx-background-color: transparent;">
+                    <children>
+                        <ImageView fx:id="buttonNote" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: CLOSED_HAND;">
+                            <image>
+                                <Image url="@img/note.png" />
+                            </image>
+                        </ImageView>
+                    </children>
+                </HBox>
+                <HBox fx:id="bgGame" layoutX="50.0" layoutY="383.3" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 20px; -fx-background-color: transparent;">
+                    <children>
+                        <ImageView fx:id="buttonGame" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: CLOSED_HAND;">
+                            <image>
+                                <Image url="@img/52761-video-game-icon.png" />
+                            </image>
+                        </ImageView>
+                    </children>
+                </HBox>
+                <HBox fx:id="bgSetting" layoutX="50.0" layoutY="550.0" prefHeight="100.0" prefWidth="100.0" style="-fx-background-radius: 20px; -fx-background-color: transparent;">
+                    <children>
+                        <ImageView fx:id="buttonSetting" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" style="-fx-cursor: CLOSED_HAND;">
+                            <image>
+                                <Image url="@img/sreachButton.png" />
+                            </image>
+                        </ImageView>
+                    </children>
+                </HBox>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
